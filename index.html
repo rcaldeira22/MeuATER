@@ -1,0 +1,29 @@
+const products = [
+    {name: 'Mouse sem fio', price: 30},
+    {name: 'Pen Drive', price: 25},
+    {name: 'Cartucho de Tinta', price: 50},
+    {name: 'Suporte Ergonômico para Notebook', price: 23},
+    {name: 'Repetidor de Sinal wi-fi', price: 44},
+]
+
+const saleProducts = products.map(product => {
+    if (product.price >= 30) {
+       return {name: product.name, price: product.price / 2 }
+    }
+    return product
+})
+
+console.log(saleProducts)
+console.log(products)
+
+const users = [
+    { name: 'Ada Lovelace', premium: true },
+    { name: 'Grace Hopper', premium: false },
+    { name: 'Alan Turing', premium: true },
+    { name: 'Linus Tolvards', premium: false },
+    { name: 'Margaret Hamilton', premium: true },
+]
+
+const premiumUser = users.filter(user => user.premium)
+
+console.log(premiumUser)
